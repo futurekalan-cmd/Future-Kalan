@@ -1,10 +1,177 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Future Kalan</title>
+<meta charset="UTF-8">
+<title>Future Kalan </title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
-<h1>Future Kalan</h1>
-<p>Welcome to Future Kalan</p>
+
+<div class="container">
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <span>Future Kalan</span>
+    </div>
+
+    <!-- MOBILE MENU TOGGLE -->
+    <div class="menu-toggle"><i class="fa fa-bars"></i></div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="notes.html">Notes</a>
+      <a href="current.html">Current Affairs</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="auth">
+        <button class="login" onclick="location.href='login.html'">Login</button>
+        <button class="signup" onclick="location.href='signup.html'">Sign Up</button>
+    </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+   <div class="hero-left">
+    <h1>Ace Your Exams with <span>Quality Notes!</span></h1>
+    <p>Get the best study notes & resources for your success.</p>
+
+    <div class="hero-btns">
+        <button class="btn blue active">🚀 Boost Your Brain</button>
+        <button class="btn yellow">🎯 Smart Learning</button>
+        <button class="btn light">🎨 Creativity Hub</button>
+        <button class="btn light">💡 Quick Tips</button>
+        <button class="btn light">🔥 Level Up Skills</button>
+    </div>
+</div>
+    <div class="hero-right">
+        <img src="hero.png" alt="Hero Image">
+    </div> 
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+    <div>📘 Quality Notes</div>
+    <div>⚡ Quick Learning</div>
+    <div>👨‍🏫 Expert Teachers</div>
+</section>
+
+<!-- Notes -->
+<section class="notes">
+    <h2>Popular Notes</h2>
+    <div class="grid">
+        <div class="card">
+            <img src="physics.png" alt="Physics">
+            <h3>10th Class</h3>
+            <button>View Course</button>
+        </div>
+        <div class="card">
+            <img src="chemistry.png" alt="Chemistry">
+            <h3>12th Class</h3>
+            <button>View Course</button>
+        </div>
+            </div>
+</section>
+
+<!-- NOTES / FACTS -->
+<section class="facts">
+    <h2>Daily Motivation 🚀</h2>
+    <div class="facts-container">
+        <div class="fact-card"><h3>💡 Fact</h3><p>Studying 25 minutes with full focus is better than 2 hours distracted.</p></div>
+        <div class="fact-card"><h3>🎯 Tip</h3><p>Consistency beats motivation. Study daily even if it's just 1 hour.</p></div>
+        <div class="fact-card"><h3>⚡ Hack</h3><p>Use Pomodoro Technique: 25 min study + 5 min break.</p></div>
+    </div>
+
+    <div class="quote-box">
+        <p>"Success doesn't come from what you do occasionally, it comes from what you do consistently."</p>
+    </div>
+
+    <div class="video-section">
+        <h3>🎥 Motivation Videos</h3>
+        <div class="video-container">
+            <iframe src="https://www.youtube.com/embed/ZXsQAXx_ao0" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/wnHW6o8WMas" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="motivation-btn">
+        <button>Stay Focused 🔥</button>
+    </div>
+</section>
+
+<!-- CURRENT AFFAIRS -->
+<section class="current">
+    <h2>Latest Current Affairs</h2>
+    <p>India’s Latest Achievements • Global News • Weekly Quiz</p>
+    <button class="blue">Read More</button>
+</section>
+
+<!-- ABOUT -->
+<section class="about">
+    <div class="about-left">
+        <h2>About Future Kalan Notes</h2>
+        <p>Helping students succeed with top-quality notes.</p>
+    </div>
+    <div class="about-right">
+        <img src="image.png" alt="About Image">
+    </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial">
+    <h2>What Our Students Say</h2>
+    <div class="grid">
+        <div class="review">Great notes! Helped me score high</div>
+        <div class="review">Very useful and easy to understand</div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 Future Kalan Notes | All Rights Reserved</p>
+    <div class="social-icons">
+        <a href="mailto:Future Kalan49@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+        <a href="https://whatsapp.com/channel/0029VbChv4E3GJP6WDEqbP2W" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="https://instagram.com/official_Future Kalan" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://youtube.com/@Future Kalan-team" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+</footer>
+
+</div>
+
+<!-- ================= JS ================= -->
+<script>
+  // MOBILE MENU TOGGLE
+  const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  // NAV LINK ACTIVE HIGHLIGHT
+  const navLinks = document.querySelectorAll('nav a');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      // sab link ton active class hatao
+      navLinks.forEach(l => l.classList.remove('active'));
+      
+      // sirf clicked link nu active class add karo
+      this.classList.add('active');
+    });
+  });
+</script>
+
 </body>
 </html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Languages Notes - Future Kalan</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* ================= PAGE SPECIFIC ================= */
+h2 {
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    width: 220px;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 120px;
+}
+
+.card button {
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    transform: scale(1.05);
+}
+
+@media (max-width:768px) {
+    .grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<header class="navbar">
+    <div class="logo">
+        <img src="logo.png" alt="Logo">
+        <span>Future Kalan</span>
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="notes.html">Notes</a>
+        <a href="current.html">Current Affairs</a>
+        <a href="about.html">About Us</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<!-- ================= CONTENT ================= -->
+<div class="container">
+
+<h2>Languages Notes</h2>
+
+<div class="grid">
+
+    <div class="card">
+        <img src="english.png">
+        <h3>English</h3>
+        <a href="english.html">
+            <button>View Notes</button>
+        </a>
+    </div>
+
+    <div class="card">
+        <img src="hindi.png">
+        <h3>Hindi</h3>
+        <a href="hindi.html">
+            <button>View Notes</button>
+        </a>
+    </div>
+
+    <div class="card">
+        <img src="punjabi.png">
+        <h3>Punjabi</h3>
+        <a href="punjabi.html">
+            <button>View Notes</button>
+        </a>
+    </div>
+
+</div>
+
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>© 2026 Future Kalan | All Rights Reserved</p>
+
+    <div class="social-icons">
+        <a href="mailto:futurekalan49@gmail.com">
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+
+        <a href="https://whatsapp.com/channel/0029VbChv4E3GJP6WDEqbP2W" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="https://instagram.com/official_futurekalan" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://youtube.com/@futurekalan-team" target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+    </div>
+</footer>
+
+</body>
+</html>

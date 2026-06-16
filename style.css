@@ -1,0 +1,353 @@
+/* ================= GLOBAL STYLES ================= */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f8fbff;
+}
+<div class="container">
+   <header class="navbar">...</header>
+</div>
+
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #1e3a8a;  /* 🔥 THIS WAS MISSING */
+  color: white;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+.logo img {
+  width: 40px;
+  margin-right: 8px;
+}
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;   /* 🔥 change */
+}
+.auth button {
+  margin-left: 10px;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+.login {
+  border: 1px solid #1e3a8a;
+  background: white;
+}
+.signup {
+  background: #fbbf24;
+  border: none;
+}
+/* ================= NAVBAR ================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #1e3a8a;
+  color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}
+
+.logo img {
+  width: 40px;
+  margin-right: 8px;
+}
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+nav a:hover,
+nav a.active {
+  border-bottom: 2px solid #fff;
+}
+
+
+
+
+
+/* ================= HERO ================= */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #eef4ff;
+  padding: 60px;
+  border-radius: 10px;
+}
+.hero-left { width: 50%; }
+.hero-left h1 { font-size: 40px; }
+.hero span { color: #1e3a8a; }
+/* Hero Buttons Base */
+.hero-btns {
+    display: flex; /* horizontal alignment */
+    flex-wrap: wrap; /* screen ch fit ho jaye */
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.hero-btns .btn {
+    font-weight: 600;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Colors */
+.hero-btns .blue { background-color: #1e3a8a; color: white; }
+.hero-btns .yellow { background-color: #fbbf24; color: black; }
+.hero-btns .light { background-color: #ffffff; color: black; border: 1px solid #ccc; }
+
+/* Hover */
+.hero-btns .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Active / Selected Button */
+.hero-btns .btn.active {
+    border: 2px solid #ff5c5c; /* highlight */
+    box-shadow: 0 6px 20px rgba(255,92,92,0.4);
+}
+
+.hero-right img { width: 350px; }
+
+/* ================= FEATURES ================= */
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background: white;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* ================= COURSES CARDS ================= */
+.courses {
+  text-align: center;
+  padding: 40px 0;
+}
+.courses h2 { margin-bottom: 40px; color: #333; }
+.grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card, .card-main {
+  width: 220px;
+  background: white;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.card img, .card-main img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+.card h3, .card-main h3 {
+  font-size: 20px;
+  margin: 10px 0;
+  color: #333;
+}
+.card button {
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.card button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+.card:hover, .card-main:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ================= POPUP CARDS ================= */
+.popup {
+  display: none;
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(255,255,255,0.95);
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 10;
+  transition: all 0.3s ease;
+  border-radius: 15px;
+}
+.popup.active { display: block; }
+.popup .sub-card, .popup .lesson-card {
+  background: #fff;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  display: inline-block;
+  width: 120px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.popup .sub-card:hover, .popup .lesson-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+.popup .sub-card img, .popup .lesson-card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 8px;
+}
+.popup .close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  background: #ff5c5c;
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* ================= FACTS SECTION ================= */
+.facts { padding: 40px 20px; text-align: center; }
+.facts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+.fact-card {
+  background: #f5f9ff;
+  padding: 20px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+.fact-card h3 { color: #4da6ff; margin-bottom: 10px; }
+.fact-card p { color: #333; font-size: 14px; }
+.fact-card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+.note:nth-child(1) { border-top: 5px solid #1e3a8a; }
+.note:nth-child(2) { border-top: 5px solid #fbbf24; }
+.note:nth-child(3) { border-top: 5px solid #10b981; }
+.note:nth-child(4) { border-top: 5px solid #ef4444; }
+
+/* ================= CURRENT ================= */
+.current { text-align: center; padding: 40px; }
+
+ /* ================= ABOUT ================= */
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.about img { 
+  width: 250px; 
+}
+
+.about h1 {
+    font-size: 40px;   /* About vadda */
+    color: black;
+}
+
+.about h1 span {
+    font-size: 28px;   /* Future Kalan chhota */
+    color: #1e3a8a;
+}
+
+/* ================= TESTIMONIAL ================= */
+.testimonial { text-align: center; padding: 40px 0; }
+.review {
+  width: 250px;
+  background: white;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+.social-icons { margin-top: 10px; }
+.social-icons a {
+  margin: 0 10px;
+  font-size: 22px;
+  color: white;
+  transition: 0.3s;
+  text-decoration: none;
+}
+.social-icons a:hover .fa-envelope { color: #EA4335; }
+.social-icons a:hover .fa-whatsapp { color: #25D366; }
+.social-icons a:hover .fa-instagram { color: #562a39; }
+.social-icons a:hover .fa-youtube { color: #FF0000; }
+
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .navbar { flex-direction: column; gap: 10px; }
+  nav { display: flex; flex-wrap: wrap; justify-content: center; }
+  .hero { flex-direction: column; text-align: center; }
+  .hero-right img { width: 100%; max-width: 400px; }
+  .grid { flex-direction: column; align-items: center; }
+  .about { flex-direction: column; text-align: center; }
+}
+
+/* ================= BUTTON & CARD HOVER ================= */
+.btn { transition: 0.3s; }
+.btn:hover { transform: scale(1.05); opacity: 0.9; }
+.card, .card-main { transition: 0.3s; }
+.card:hover, .card-main:hover { transform: translateY(-10px); }
+
+/* ================= CARD-LINK FULL CLICK ================= */
+.card-main { position: relative; }
+.card-main .btn-link {
+  position: absolute; top:0; left:0; width:100%; height:100%;
+  z-index:10; text-decoration:none;
+}
+.notes h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
